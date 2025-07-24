@@ -180,4 +180,4 @@ You can also deploy Sarah to **Google Cloud Run**. After creating a GCP project 
    gcloud builds submit --region=<LOCATION>
    ```
 
-You’re all set! Sarah will be live on Cloud Run, ready to assist with your parenting needs.
+You’re all set! Sarah will be live on Cloud Run, ready to assist with your parenting needs. Just massage her when you need help!
