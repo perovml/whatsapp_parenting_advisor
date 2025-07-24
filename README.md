@@ -1,66 +1,70 @@
 <p align="center">
         <img alt="logo" src="img/ava_final_design.gif" width=1000 />
     <h1 align="center">📱 Sarah 📱</h1>
-    <h3 align="center">Your best and timely parenting advice</h3>
+    <h3 align="center">Your helpful parenting advisor</h3>
 </p>
 
 <p align="center">
     <img alt="logo" src="img/whatsapp_logo.png" width=100 />
 </p>
 
-This repository contains Sarah, a WhatsApp‑integrated nanny and parenting advisor agent. Sarah is designed to help you plan your child’s day, suggest activities, track routines, and support both emotional and physical health. Follow the steps below to get Sarah up and running locally and (optionally) deploy her on Google Cloud Run.
+# Sarah WhatsApp Nanny Agent
+
+This repository contains **Sarah**, a WhatsApp‑integrated nanny and parenting‑advisor assistant. Sarah helps you plan your child’s day, suggest activities, track routines, and support both emotional and physical health. Follow the steps below to get Sarah running locally and—optionally—deploy her on Google Cloud Run.
 
 The repository is based on the course from Neural Maze (https://github.com/neural-maze/ava-whatsapp-agent-course)
 
-1. Clone the repository
-First, clone the repository and enter its folder:
+## 1. Clone the repository
 
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/neural-maze/sarah-whatsapp-agent-course.git
 cd sarah-whatsapp-agent-course
-2. Install uv
-Instead of pip or poetry, we use uv as the Python package manager.
-To install uv, follow the official installation instructions.
+```
 
-3. Install the project dependencies
-Once uv is installed, create and activate a virtual environment, then install:
+## 2. Install **uv**
 
-bash
-Copy
-Edit
-# Create virtual environment
-uv venv .venv
+Instead of `pip` or `poetry`, we use **uv** as our Python package manager.
+Follow the official [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/) to get started.
 
-# macOS / Linux
-. .venv/bin/activate
+## 3. Install project dependencies
 
-# Windows (PowerShell)
-. .\.venv\Scripts\Activate.ps1
+1. **Create** and **activate** a virtual environment:
 
-# Install the package in editable mode
-uv pip install -e .
-Verify everything works:
+   ```bash
+   uv venv .venv
+   # macOS / Linux
+   . .venv/bin/activate
+   # Windows (PowerShell)
+   . .\.venv\Scripts\Activate.ps1
+   ```
+2. **Install** the package in editable mode:
 
-bash
-Copy
-Edit
-uv run python --version
-You should see Python 3.12.8.
+   ```bash
+   uv pip install -e .
+   ```
+3. **Verify** your Python version:
 
-4. Environment Variables
-Copy the example file and open .env in your editor:
+   ```bash
+   uv run python --version
+   ```
 
-bash
-Copy
-Edit
+   You should see:
+
+   ```
+   Python 3.12.8
+   ```
+
+## 4. Environment Variables
+
+Copy the template and open `.env` in your editor:
+
+```bash
 cp .env.example .env
-Populate these values (you can leave the WhatsApp‑specific ones empty for now):
+```
 
-dotenv
-Copy
-Edit
+Populate these values (you can leave WhatsApp settings empty for now):
+
+```dotenv
 GROQ_API_KEY=""
 ELEVENLABS_API_KEY=""
 ELEVENLABS_VOICE_ID=""
@@ -70,114 +74,110 @@ QDRANT_API_KEY=""
 WHATSAPP_PHONE_NUMBER_ID=""
 WHATSAPP_TOKEN=""
 WHATSAPP_VERIFY_TOKEN=""
-We’ll cover WhatsApp setup in a later lesson—feel free to leave those blank for now.
+```
 
-Getting Your API Keys
-Groq: Follow the Groq quickstart to generate GROQ_API_KEY.
+### Generating Your API Keys
 
-ElevenLabs: Sign up at ElevenLabs, then create an API key and choose your voice ID.
+* **Groq**
+  Follow the [Groq quickstart](https://console.groq.com/docs/quickstart) to generate `GROQ_API_KEY`.
 
-Together AI: Log in to Together AI and generate TOGETHER_API_KEY.
+* **ElevenLabs**
+  Sign up at [ElevenLabs](https://elevenlabs.io/), then create an API key and choose your `ELEVENLABS_VOICE_ID`.
 
-Qdrant:
+* **Together AI**
+  Log in at [Together AI](https://www.together.ai/) and generate `TOGETHER_API_KEY`.
 
-Locally: no setup needed.
+* **Qdrant**
 
-Cloud: create an account at Qdrant Cloud, then copy your QDRANT_URL and QDRANT_API_KEY from the dashboard.
+  * **Local**: no setup needed.
+  * **Cloud**: create an account at [Qdrant Cloud](https://login.cloud.qdrant.io/), then copy your `QDRANT_URL` and `QDRANT_API_KEY`.
 
-Paste each key into your .env file, matching the names in .env.example.
+Paste each key into your `.env` file, matching the names in `.env.example`.
 
-5. First run
-Start Sarah locally via our Makefile:
+## 5. First run
 
-bash
-Copy
-Edit
+Start Sarah locally via the Makefile:
+
+```bash
 make sarah-run
-This will spin up a Docker Compose stack with three services:
+```
 
-Qdrant Database at http://localhost:6333/dashboard
+This brings up a Docker Compose stack with three services:
 
-Chainlit UI at http://localhost:8000
-
-FastAPI app at http://localhost:8080/docs (used later for WhatsApp integration)
+* **Qdrant Database**: [http://localhost:6333/dashboard](http://localhost:6333/dashboard)
+* **Chainlit UI**: [http://localhost:8000](http://localhost:8000)
+* **FastAPI app**: [http://localhost:8080/docs](http://localhost:8080/docs) (used later for WhatsApp integration)
 
 Click the Chainlit link to begin chatting with Sarah, your nanny‑advisor agent.
 
-To tear everything down and clean up volumes, run:
+To tear everything down and clean up volumes:
 
-bash
-Copy
-Edit
+```bash
 make sarah-delete
-Google Cloud Platform Setup
-You can also deploy Sarah on Google Cloud Run. After creating a GCP project and enabling billing:
+```
 
-Authenticate
+## 6. Google Cloud Run Deployment
 
-bash
-Copy
-Edit
-gcloud auth login
-Set your project
+You can also deploy Sarah to **Google Cloud Run**. After creating a GCP project and enabling billing, follow these steps:
 
-bash
-Copy
-Edit
-gcloud config set project <PROJECT_ID>
-Enable required APIs
+1. **Authenticate**
 
-bash
-Copy
-Edit
-gcloud services enable \
-  cloudbuild.googleapis.com \
-  run.googleapis.com \
-  artifactregistry.googleapis.com \
-  cloudresourcemanager.googleapis.com \
-  secretmanager.googleapis.com
-Configure Docker auth
+   ```bash
+   gcloud auth login
+   ```
+2. **Set your project**
 
-bash
-Copy
-Edit
-gcloud config set compute/region <LOCATION>
-gcloud auth configure-docker <LOCATION>-docker.pkg.dev -q
-Create a Docker repo
+   ```bash
+   gcloud config set project <PROJECT_ID>
+   ```
+3. **Enable required APIs**
 
-bash
-Copy
-Edit
-gcloud artifacts repositories create sarah-app \
-  --repository-format=docker \
-  --location=<LOCATION> \
-  --description="Docker repo for Sarah, the WhatsApp Nanny Agent"
-Create secrets
+   ```bash
+   gcloud services enable \
+     cloudbuild.googleapis.com \
+     run.googleapis.com \
+     artifactregistry.googleapis.com \
+     cloudresourcemanager.googleapis.com \
+     secretmanager.googleapis.com
+   ```
+4. **Configure Docker auth**
 
-bash
-Copy
-Edit
-echo -n "<GROQ_API_KEY>"          | gcloud secrets create GROQ_API_KEY --replication-policy="automatic" --data-file=-
-echo -n "<ELEVENLABS_API_KEY>"    | gcloud secrets create ELEVENLABS_API_KEY --replication-policy="automatic" --data-file=-
-echo -n "<ELEVENLABS_VOICE_ID>"   | gcloud secrets create ELEVENLABS_VOICE_ID --replication-policy="automatic" --data-file=-
-echo -n "<TOGETHER_API_KEY>"      | gcloud secrets create TOGETHER_API_KEY --replication-policy="automatic" --data-file=-
-echo -n "<QDRANT_URL>"            | gcloud secrets create QDRANT_URL --replication-policy="automatic" --data-file=-
-echo -n "<QDRANT_API_KEY>"        | gcloud secrets create QDRANT_API_KEY --replication-policy="automatic" --data-file=-
-echo -n "<WHATSAPP_PHONE_NUMBER_ID>" | gcloud secrets create WHATSAPP_PHONE_NUMBER_ID --replication-policy="automatic" --data-file=-
-echo -n "<WHATSAPP_TOKEN>"        | gcloud secrets create WHATSAPP_TOKEN --replication-policy="automatic" --data-file=-
-echo -n "<WHATSAPP_VERIFY_TOKEN>" | gcloud secrets create WHATSAPP_VERIFY_TOKEN --replication-policy="automatic" --data-file=-
-Grant Cloud Run access to secrets
+   ```bash
+   gcloud config set compute/region <LOCATION>
+   gcloud auth configure-docker <LOCATION>-docker.pkg.dev -q
+   ```
+5. **Create a Docker repository**
 
-bash
-Copy
-Edit
-gcloud projects add-iam-policy-binding <PROJECT_ID> \
-  --member="serviceAccount:$(gcloud projects describe $(gcloud config get-value project) --format='value(projectNumber)')-compute@developer.gserviceaccount.com" \
-  --role="roles/secretmanager.secretAccessor"
-Finally, build and deploy:
+   ```bash
+   gcloud artifacts repositories create sarah-app \
+     --repository-format=docker \
+     --location=<LOCATION> \
+     --description="Docker repo for Sarah, the WhatsApp Nanny Agent"
+   ```
+6. **Create secrets in Secret Manager**
 
-bash
-Copy
-Edit
-gcloud builds submit --region=<LOCATION>
+   ```bash
+   echo -n "<GROQ_API_KEY>"            | gcloud secrets create GROQ_API_KEY            --replication-policy="automatic" --data-file=-
+   echo -n "<ELEVENLABS_API_KEY>"      | gcloud secrets create ELEVENLABS_API_KEY      --replication-policy="automatic" --data-file=-
+   echo -n "<ELEVENLABS_VOICE_ID>"     | gcloud secrets create ELEVENLABS_VOICE_ID     --replication-policy="automatic" --data-file=-
+   echo -n "<TOGETHER_API_KEY>"        | gcloud secrets create TOGETHER_API_KEY        --replication-policy="automatic" --data-file=-
+   echo -n "<QDRANT_URL>"              | gcloud secrets create QDRANT_URL              --replication-policy="automatic" --data-file=-
+   echo -n "<QDRANT_API_KEY>"          | gcloud secrets create QDRANT_API_KEY          --replication-policy="automatic" --data-file=-
+   echo -n "<WHATSAPP_PHONE_NUMBER_ID>"| gcloud secrets create WHATSAPP_PHONE_NUMBER_ID --replication-policy="automatic" --data-file=-
+   echo -n "<WHATSAPP_TOKEN>"          | gcloud secrets create WHATSAPP_TOKEN          --replication-policy="automatic" --data-file=-
+   echo -n "<WHATSAPP_VERIFY_TOKEN>"   | gcloud secrets create WHATSAPP_VERIFY_TOKEN   --replication-policy="automatic" --data-file=-
+   ```
+7. **Grant Cloud Run access to secrets**
+
+   ```bash
+   gcloud projects add-iam-policy-binding <PROJECT_ID> \
+     --member="serviceAccount:$(gcloud projects describe $(gcloud config get-value project) --format='value(projectNumber)')-compute@developer.gserviceaccount.com" \
+     --role="roles/secretmanager.secretAccessor"
+   ```
+8. **Build and deploy**
+
+   ```bash
+   gcloud builds submit --region=<LOCATION>
+   ```
+
 You’re all set! Sarah will be live on Cloud Run, ready to assist with your parenting needs.
