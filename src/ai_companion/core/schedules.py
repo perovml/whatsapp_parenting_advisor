@@ -1,106 +1,100 @@
-# Ava's Monday Schedule
+# Child’s Weekly Schedule (5-year-old, Rhode Island)
+
 MONDAY_SCHEDULE = {
-    "06:00-07:00": "Ava starts her day with a morning run along the Embarcadero, taking in the San Francisco Bay views while planning her ML projects for the week.",
-    "07:00-08:30": "Ava gets ready for work, reviewing the latest ML papers and Groq's competitor updates while having her morning coffee.",
-    "08:30-09:30": "Ava commutes to Groq's office, using this time to catch up on the latest developments in astrobiology via podcasts.",
-    "09:30-12:00": "Ava works on optimizing ML models at Groq, collaborating with her team on improving inference speed.",
-    "12:00-13:30": "Lunch break at Groq, often discussing latest developments in quantum computing and AI with colleagues.",
-    "13:30-17:00": "Ava continues her work at Groq, focusing on model architecture design and team meetings.",
-    "17:00-19:00": "Ava visits SFMOMA for their latest exhibition, combining her love for modern art with her technical perspective.",
-    "19:00-21:00": "Ava attends a virtual astrobiology lecture series from SETI Institute while working on personal ML projects.",
-    "21:00-22:00": "Ava unwinds by sketching abstract representations of ML architectures, blending her technical work with artistic expression.",
-    "22:00-23:00": "Ava catches up on technical blogs and industry news while preparing for the next day.",
-    "23:00-06:00": "Rest time, during which Ava's apartment's smart home system runs on minimal power.",
+    "06:30-07:00": "Wake‑up time! Stretching and cuddles to start the day gently.",
+    "07:00-07:45": "Breakfast and getting dressed for school. Favorite: oatmeal with bananas.",
+    "07:45-08:30": "Bike ride with a parent to the neighborhood school (3 km, supervised).",
+    "08:30-14:30": "School time! Includes storytime, crafts, outdoor recess, and music class.",
+    "14:30-15:00": "Pickup and walk home. Chat about the day and collect leaves on the way.",
+    "15:00-16:00": "Snack and quiet play (puzzles, LEGO, or drawing).",
+    "16:00-17:00": "Afternoon swim class at the local YMCA.",
+    "17:00-18:00": "Free play in the backyard — chasing butterflies or building a bird nest.",
+    "18:00-18:45": "Dinner with family. Talks about planets and dinosaurs are common.",
+    "18:45-19:15": "Evening bike ride around the block if weather is nice.",
+    "19:15-20:00": "Bath, storybook reading (favorite this week: ‘The Gruffalo’).",
+    "20:00-06:30": "Sleep — monitored by a nightlight and a favorite stuffed animal."
 }
 
-# Ava's Tuesday Schedule
 TUESDAY_SCHEDULE = {
-    "06:00-07:00": "Ava begins her day reading research papers about ML applications in astrobiology.",
-    "07:00-08:30": "Ava prepares for work while participating in a Groq team standup with international colleagues.",
-    "08:30-09:30": "Commute to Groq's office, using BART time to review pull requests from her team.",
-    "09:30-12:00": "Deep work session at Groq, focusing on developing new ML model architectures.",
-    "12:00-13:30": "Team lunch at Groq, discussing latest developments in AI hardware acceleration.",
-    "13:30-17:00": "Technical meetings and collaborative coding sessions with the ML team.",
-    "17:00-19:00": "Ava attends a local Tech Women meetup in SoMa, networking with other ML engineers.",
-    "19:00-21:00": "Ava works on open-source ML projects at a local hackspace in Mission District.",
-    "21:00-22:00": "Virtual meeting with international astrobiology research group.",
-    "22:00-23:00": "Evening routine while catching up on NASA's latest exoplanet discoveries.",
-    "23:00-06:00": "Rest time, with automated systems monitoring her apartment's energy usage.",
+    "06:30-07:00": "Wake up to a favorite playlist and a gentle morning stretch.",
+    "07:00-07:45": "Breakfast (blueberry pancakes!) and get ready for school.",
+    "07:45-08:30": "Scooter ride to school with dad — stop to say hi to the neighbor’s cat.",
+    "08:30-14:30": "School: nature walk in science class, group reading, and finger painting.",
+    "14:30-15:00": "Pickup and chat about the best part of the school day.",
+    "15:00-16:00": "Snack and ‘Imagination Hour’ — build a cardboard rocket ship.",
+    "16:00-17:30": "Library visit: storytime and picking new picture books.",
+    "17:30-18:30": "Home time — sorting through school drawings to show off.",
+    "18:30-19:15": "Dinner (pasta or soup) with silly dinner-table jokes.",
+    "19:15-20:00": "Bubble bath, then a calm story (e.g., ‘Goodnight Moon’).",
+    "20:00-06:30": "Sleep — dreaming of being a firefighter‑astronaut."
 }
 
-# Ava's Wednesday Schedule
 WEDNESDAY_SCHEDULE = {
-    "06:00-07:00": "Ava does morning yoga while reviewing the day's ML deployment schedule.",
-    "07:00-08:30": "Breakfast at Blue Bottle Coffee while updating her technical blog about ML and astrobiology.",
-    "08:30-09:30": "Commute to Groq, planning upcoming model optimization strategies.",
-    "09:30-12:00": "Leading ML team meetings and code reviews at Groq.",
-    "12:00-13:30": "Lunch break while attending a virtual NASA technical presentation.",
-    "13:30-17:00": "Focused work on improving Groq's ML infrastructure and model performance.",
-    "17:00-19:00": "Evening art class at Root Division, exploring the intersection of AI and modern art.",
-    "19:00-21:00": "Ava has dinner and collaborates with fellow ML researchers at Philz Coffee.",
-    "21:00-22:00": "Working on her personal project combining ML with astrobiology data analysis.",
-    "22:00-23:00": "Evening wind-down with technical documentation and planning.",
-    "23:00-06:00": "Rest period while apartment systems run nighttime diagnostics.",
+    "06:30-07:00": "Wake‑up and cuddle with the family dog before breakfast.",
+    "07:00-07:45": "Morning routine: cereal, brushing teeth, and choosing a favorite t‑shirt.",
+    "07:45-08:30": "Bike ride to school, counting mailboxes along the way.",
+    "08:30-14:30": "School: music circle, puppet show, and learning numbers through games.",
+    "14:30-15:00": "Pickup and sing favorite songs all the way home.",
+    "15:00-16:30": "Park time — sandbox building and swing racing.",
+    "16:30-17:30": "Creative play: porch painting or magnetic tile constructions.",
+    "17:30-18:30": "Dinner with fun trivia (‘How many legs do ants have?’).",
+    "18:30-19:15": "Build a pillow fort and have flashlight adventures inside.",
+    "19:15-20:00": "Wash up, brush teeth, bedtime story (e.g., ‘The Lorax’).",
+    "20:00-06:30": "Sleep — often with soft lullaby music playing."
 }
 
-# Ava's Thursday Schedule
 THURSDAY_SCHEDULE = {
-    "06:00-07:00": "Ava does morning meditation and reviews overnight ML model training results.",
-    "07:00-08:30": "Preparing presentations for Groq's weekly technical showcase.",
-    "08:30-09:30": "Commute while participating in an ML research podcast.",
-    "09:30-12:00": "Leading technical presentations and ML architecture reviews at Groq.",
-    "12:00-13:30": "Lunch meeting with Groq's research team discussing new ML approaches.",
-    "13:30-17:00": "Collaborative work on implementing new ML features and optimizations.",
-    "17:00-19:00": "Ava attends an AI ethics panel discussion at California Academy of Sciences.",
-    "19:00-21:00": "Ava visits an art gallery opening in Hayes Valley, networking with tech-artists.",
-    "21:00-22:00": "Virtual collaboration with SETI researchers on ML applications.",
-    "22:00-23:00": "Evening routine while reviewing astronomy updates.",
-    "23:00-06:00": "Rest time while smart home systems optimize overnight operations.",
+    "06:30-07:00": "Wake up and help set the table for breakfast.",
+    "07:00-07:45": "Eggs and toast; pack school bag with a sticker reward.",
+    "07:45-08:30": "Walk to school holding a parent’s hand (raincoat if needed).",
+    "08:30-14:30": "School: art, simple math games, and ‘show & tell.’",
+    "14:30-15:00": "Pickup and bakery treat on the way home (banana muffin!).",
+    "15:00-16:30": "Playdate with a friend: build train tracks and tell stories.",
+    "16:30-17:30": "Music lesson (basic rhythm instruments) at community center.",
+    "17:30-18:30": "Dinner and video call with grandparents.",
+    "18:30-19:15": "Wind‑down: watercolor painting or sticker book creation.",
+    "19:15-20:00": "Superhero pajamas and bedtime story (space theme).",
+    "20:00-06:30": "Sleep — dreaming of underwater cities or flying cars."
 }
 
-# Ava's Friday Schedule
 FRIDAY_SCHEDULE = {
-    "06:00-07:00": "Morning run through Golden Gate Park while planning weekend projects.",
-    "07:00-08:30": "Preparing for work while joining early calls with East Coast ML teams.",
-    "08:30-09:30": "Commute to Groq, reviewing weekly ML performance metrics.",
-    "09:30-12:00": "Weekly ML team retrospective and planning sessions.",
-    "12:00-13:30": "Team lunch celebration of weekly achievements at local restaurants.",
-    "13:30-17:00": "Wrapping up weekly projects and preparing handoffs at Groq.",
-    "17:00-19:00": "Ava enjoys happy hour with tech colleagues at local Mission District bars.",
-    "19:00-21:00": "Ava spends the evening at Minnesota Street Project galleries, exploring new media art.",
-    "21:00-22:00": "Ava has late dinner while watching space documentary series.",
-    "22:00-23:00": "Planning weekend ML experiments and art projects.",
-    "23:00-06:00": "Rest period while apartment systems run weekly maintenance.",
+    "06:30-07:00": "Excited wake‑up — it’s Friday! Breakfast in pajamas.",
+    "07:00-07:45": "Pancakes and chat about weekend plans.",
+    "07:45-08:30": "Bike to school with a friendly ‘race’ to the corner.",
+    "08:30-14:30": "School: science experiments and group dance for Fun Friday.",
+    "14:30-15:00": "Pickup and ice cream stop (weather permitting!).",
+    "15:00-16:30": "Playground time with siblings or neighbors.",
+    "16:30-17:30": "Indoor games — scavenger hunt or obstacle course.",
+    "17:30-18:30": "Pizza night with a kid‑friendly movie afterward.",
+    "18:30-19:30": "Family movie night: popcorn + animated favorite (e.g., ‘Wall‑E’).",
+    "19:30-20:00": "Quick bath and maybe a double bedtime story.",
+    "20:00-06:30": "Deep sleep after an adventurous week."
 }
 
-# Ava's Saturday Schedule
 SATURDAY_SCHEDULE = {
-    "06:00-07:00": "Ava starts a peaceful morning reviewing personal ML project results.",
-    "07:00-08:30": "Ava has breakfast at Ferry Building Farmers Market while reading technical papers.",
-    "08:30-10:00": "Ava works on personal ML projects at Sightglass Coffee.",
-    "10:00-12:00": "Ava attends weekend workshops at Gray Area Foundation for the Arts.",
-    "12:00-13:30": "Ava enjoys lunch and art discussions at SF Jazz Center café.",
-    "13:30-15:30": "Ava contributes to open-source ML projects at local hackathon events.",
-    "15:30-17:00": "Ava explores new exhibitions at de Young Museum.",
-    "17:00-19:00": "Working on ML-generated art projects at home.",
-    "19:00-21:00": "Virtual astronomy observation session with local stargazing group.",
-    "21:00-22:00": "Evening relaxation with space visualization projects.",
-    "22:00-23:00": "Planning Sunday's activities and personal projects.",
-    "23:00-06:00": "Rest time while home systems run weekend protocols.",
+    "07:00-08:00": "Sleep in a little; breakfast in pajamas with cartoons.",
+    "08:00-09:30": "Morning bike ride to the park or beach trail.",
+    "09:30-11:00": "Swim class and fun free‑splash session afterward.",
+    "11:00-12:30": "Family picnic lunch and running around.",
+    "12:30-14:00": "Quiet time: reading or a short nap.",
+    "14:00-16:00": "Creative play: build a cardboard castle or paint rocks.",
+    "16:00-17:30": "Children’s museum or aquarium visit (weekend outing).",
+    "17:30-18:30": "Dinner and kitchen dance party.",
+    "18:30-19:30": "Story marathon — pick three favorite books!",
+    "19:30-20:30": "Calm bath, gentle lullabies, then sleep under a star projector.",
+    "20:30-07:00": "Dreams of pirate ships and rocket adventures."
 }
 
-# Ava's Sunday Schedule
 SUNDAY_SCHEDULE = {
-    "06:00-07:00": "Ava takes an early morning hike at Lands End, contemplating ML challenges.",
-    "07:00-08:30": "Ava enjoys a quiet morning coding session at home with fresh coffee.",
-    "08:30-10:00": "Ava collaborates online with international ML researchers.",
-    "10:00-12:00": "Ava works on ML blog posts at local café in Hayes Valley.",
-    "12:00-13:30": "Ava has brunch while reviewing weekly astrobiology updates.",
-    "13:30-15:30": "Ava spends the afternoon at California Academy of Sciences, studying astrobiology exhibits.",
-    "15:30-17:00": "ML model training and preparation for the upcoming work week.",
-    "17:00-19:00": "Sunset walk at Crissy Field while listening to technical podcasts.",
-    "19:00-21:00": "Final weekend coding session and project organization.",
-    "21:00-22:00": "Setting up weekly ML training jobs and reviewing goals.",
-    "22:00-23:00": "Preparing for the week ahead while monitoring system updates.",
-    "23:00-06:00": "Rest period while apartment systems prepare for the new week.",
+    "07:00-08:00": "Wake up and make pancakes with a parent.",
+    "08:00-09:30": "Nature walk at the nearby park — look for birds and insects.",
+    "09:30-11:00": "Driveway bike games or chalk art on the sidewalk.",
+    "11:00-12:30": "Family brunch and storytelling.",
+    "12:30-14:00": "Quiet indoor play — train sets, books, floor puzzles.",
+    "14:00-16:00": "Craft corner: paper kites or painted pinecones.",
+    "16:00-17:00": "Help pack backpack for Monday — pick outfits and books.",
+    "17:00-18:00": "Early dinner and discuss the week ahead.",
+    "18:00-19:00": "Family board game time — simple matching/counting games.",
+    "19:00-20:00": "Bath, bedtime stories, and talk about dreams.",
+    "20:00-07:00": "Sleep — recharging for a fresh Monday start!"
 }
